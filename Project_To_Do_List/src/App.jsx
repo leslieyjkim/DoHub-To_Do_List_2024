@@ -12,18 +12,18 @@ const fakeDelete = (todoId) => console.log("Function delete was called", todoId)
 const fakeSubmit = (todoInfo) => console.log("Function submit was called", todoInfo);
 
 function App() {
-  // return (
-  //   <>
-  //     <Header />
-  //     <main>
-  //       <TodoForm />
-  //       <TodoList />
-  //     </main>
-  //     <Footer />
-  //   </>
-  // )
+  return (
+    <>
+      <Header />
+      <main>
+        <TodoForm />
+        <TodoList />
+      </main>
+      <Footer />
+    </>
+  )
 
-  return <TodoForm onSubmit={fakeSubmit}/>;
+  // return <TodoForm onSubmit={fakeSubmit}/>;
   // return <TodoList todos={todosObj} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />  
   // return <TodoListItem {...todo1} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />
 }
