@@ -21,13 +21,22 @@ export default function TodoForm(props) {
         setFormData(updatedFormData);          //Once I have that, can I setFormData to my updatedFormData?
     }
  
-    const toggleForm = () => setIsActive(!isActive);
+    const handleSubmit = (event) => {
+        event.preventDefault()                  //Hey, Form calm down. Just do what I told you instead of refreshing entire page,
 
+        onSubmit(formData)                      //Once I have that, I want to call my onSubmit prop with formData.
+
+        setFormData(initialValues)              //Once I have that, I want to reset formData, since we have an object called initialValues, 
+                                                //we're not mutating data so initialValues never gets changed. So we just refer to it again.
+        setIsActive(false);                     //After that, setIsActive to false again.(reset) Because I want to add form when I finish submitting an input.
+    }
+    const toggleForm = () => setIsActive(!isActive);
+ 
     return (
         <section className="TodoForm">
             {!isActive && <button onClick={toggleForm}>Add a to-do</button>}
             {isActive && (
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input type="text" name="task" placeholder="Enter the task" value={formData.task} onChange={handleChange}/>
                     <input type="color" name="color" placeholder="Enter the color" value={formData.color} onChange={handleChange}/>
                     <input type="date" name="dueDate" placeholder="Enter the due date" value={formData.dueDate} onChange={handleChange}/>
