@@ -62,12 +62,12 @@ const todosArr = [todo1, todo2, todo3];
 
 ```jsx
 const addTodoArr = (todos, todoInfo) => {
-  const { task, dueDate, color } = todoInfo;
-  const id = Math.floor(Math.random() * 3272341390831);
+  const { task, dueDate, color } = todoInfo; //todos are lists of todo, todoInfo is new item 
+  const id = Math.floor(Math.random() * 3272341390831); //random Id, not duplicated
 
   const newTodo = { id, task, dueDate, color, isComplete: false };
 
-  const updatedTodos = [...todos, newTodo];
+  const updatedTodos = [...todos, newTodo]; //not to mutate originals, make new array of all the current todos(spread), and add newTodo 
 
   return updatedTodos;
 };
@@ -89,11 +89,11 @@ const editTodoArr = (todos, todoId, todoInfo) => {
   const { task, dueDate, color } = todoInfo;
 
   const todoToChange = todos.find((todo) => todo.id === todoId);
-  const updatedTodo = { ...todoToChange, task, dueDate, color };
+  const updatedTodo = { ...todoToChange, task, dueDate, color }; //those added 3 things(task,dueDate,color) will overwrite the existing keys. It will not affect the ID
 
-  const updatedTodos = [...todos];
+  const updatedTodos = [...todos];//not to mutate, spread the old todos and put them in new array. (assign new address)
   const todoIndex = todos.findIndex((todo) => todo.id === todoId);
-  updatedTodos[todoIndex] = updatedTodo;
+  updatedTodos[todoIndex] = updatedTodo; //Hey, updatedTodos, add the position of the todoIndex, I'd like to put the updatedTodo there. 
 
   return updatedTodos;
 };
@@ -101,9 +101,9 @@ const editTodoArr = (todos, todoId, todoInfo) => {
 const editTodoObj = (todos, todoId, todoInfo) => {
   const { task, dueDate, color } = todoInfo;
 
-  const updatedTodo = { ...todos[todoId], task, dueDate, color };
+  const updatedTodo = { ...todos[todoId], task, dueDate, color }; //directly access to the position of [todoId] in existing lists of todos. and overwrite those 3 things there.
 
-  const updatedTodos = { ...todos, [todoId]: updatedTodo };
+  const updatedTodos = { ...todos, [todoId]: updatedTodo }; //
 
   return updatedTodos;
 };
@@ -121,15 +121,15 @@ const deleteTodo = (todos, todoId) => {
 };
 ```
 
-### Mark todo as complete
+### Mark todo as complete (both activate button / deactivate button by 'toggling')
 
 ```jsx
 const toggleTodoCompletion = (todos, todoId) => {
   const udpatedTodo = { ...todos[todoId] };
 
-  updatedTodo.isComplete = !updatedTodo.isComplete;
+  updatedTodo.isComplete = !updatedTodo.isComplete; //These are flipping the value arround. button activate vs de-activate whenever clicking. 
 
-  const updatedTodos = { ...todos, [todoId]: updatedTodo };
+  const updatedTodos = { ...todos, [todoId]: updatedTodo }; //at the position of todoId
 };
 ```
 
