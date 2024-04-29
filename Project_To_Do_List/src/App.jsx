@@ -7,8 +7,8 @@ import TodoListItem from './components/TodoListItem'
 
 import { todo1, todo2, todosObj } from './data/todoData'
 
-const fakeToggle = (todoId) => console.log("Function toggle was called");
-const fakeDelete = (todoId) => console.log("Function delete was called");
+const fakeToggle = (todoId) => console.log("Function toggle was called", todoId);
+const fakeDelete = (todoId) => console.log("Function delete was called", todoId);
 
 function App() {
   // return (
