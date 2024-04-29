@@ -7,8 +7,8 @@ import TodoListItem from './components/TodoListItem'
 
 import { todo1, todo2, todosObj } from './data/todoData'
 
-const fakeToggle = () => console.log("Function toggle was called");
-const fakeDelete = () => console.log("Function delete was called");
+const fakeToggle = (todoId) => console.log("Function toggle was called");
+const fakeDelete = (todoId) => console.log("Function delete was called");
 
 function App() {
   // return (
@@ -23,8 +23,8 @@ function App() {
   // )
 
 
-  // return <TodoList todos={todosObj} />  
-  return <TodoListItem {...todo1} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />
+  return <TodoList todos={todosObj} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />  
+  // return <TodoListItem {...todo1} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />
 }
 
 export default App
