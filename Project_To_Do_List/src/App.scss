@@ -1,0 +1,15 @@
+.TodoListItem{
+    max-width: 900px;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    gap: 1em;
+
+    list-style-type: none; //removing bullet point in the list
+    
+    border: 2px solid white;
+    
+    button:first-of-type {   //first button, 'Mark as incomplete'속성임. 오른쪽 버튼팀과 왼쪽텍스트 팀과 그룹으로 나눠, 중간에 공간 띄우기 
+        margin-left: auto;
+    }
+}

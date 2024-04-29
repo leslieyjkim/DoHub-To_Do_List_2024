@@ -11,9 +11,12 @@
 export default function TodoListItem(props) {
     const { task, dueDate, color, isComplete } = props;
 
-    const parsedDate = new Date(dueDate)
+    const parsedDate = new Date(dueDate);
+
+    const style = {borderColor:color};
+
     return (
-        <li className="TodoListItem">
+        <li className="TodoListItem" style={style}>
             <span>{task}</span>
             <span>{parsedDate.toLocaleDateString()}</span>
             {isComplete && <button>Mark as incomplete</button>}
