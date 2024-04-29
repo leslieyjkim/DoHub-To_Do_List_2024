@@ -9,6 +9,7 @@ import { todo1, todo2, todosObj } from './data/todoData'
 
 const fakeToggle = (todoId) => console.log("Function toggle was called", todoId);
 const fakeDelete = (todoId) => console.log("Function delete was called", todoId);
+const fakeSubmit = (todoInfo) => console.log("Function submit was called", todoInfo);
 
 function App() {
   // return (
@@ -22,8 +23,8 @@ function App() {
   //   </>
   // )
 
-
-  return <TodoList todos={todosObj} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />  
+  return <TodoForm onSubmit={fakeSubmit}/>;
+  // return <TodoList todos={todosObj} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />  
   // return <TodoListItem {...todo1} toggleTodo={fakeToggle} deleteTodo={fakeDelete} />
 }
 
