@@ -9,7 +9,7 @@
 //Above: sample data, which helps to let me know what I'm working with. 
 
 export default function TodoListItem(props) {
-    const { task, dueDate, color, isComplete } = props;
+    const { task, dueDate, color, isComplete, toggleTodo, deleteTodo  } = props;
 
     const parsedDate = new Date(dueDate);
 
@@ -19,10 +19,10 @@ export default function TodoListItem(props) {
         <li className="TodoListItem" style={style}>
             <span>{task}</span>
             <span>{parsedDate.toLocaleDateString()}</span>
-            {isComplete && <button>Mark as incomplete</button>}
-            {!isComplete && <button>Mark as complete</button>}
+            {isComplete && <button onClick={toggleTodo}>Mark as incomplete</button>}
+            {!isComplete && <button onClick={toggleTodo}>Mark as complete</button>}
             {/* <button>Edit</button> */}
-            {isComplete && <button>Delete</button>}
+            {isComplete && <button onClick={deleteTodo}>Delete</button>}
         </li>
     );
 }
