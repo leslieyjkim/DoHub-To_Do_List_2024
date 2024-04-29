@@ -1,10 +1,12 @@
 # Project building steps!
 
+
+![screenshot](https://raw.githubusercontent.com/leslieyjkim/To_Do_List_2024/22750e64bfd0dc9827829871b249be702921efa3/initial_Wireframes.png)
 1. Idea
 2. User Stories
 3. Initial Plan
    1. Data structures
-   2. Mock Data
+   2. Mock Data 
    3. Visual Mocks / Wireframes
    4. Templates (Pretty wireframe)
 4. Stack choice (React / Express / SQLite)
