@@ -1,11 +1,10 @@
  import './App.scss'
+ import Header from "./components/Header";
 
 function App() {
   return (
     <>
-    <header className="Header">
-      <h1>Super Todo List of Destiny</h1>
-    </header>
+    <Header />
     <main>
       <section className="TodoForm">
         <button>Add a task</button>
