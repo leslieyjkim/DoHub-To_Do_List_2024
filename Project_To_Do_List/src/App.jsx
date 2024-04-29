@@ -5,7 +5,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoListItem from './components/TodoListItem'
 
-import {todo1, todo2} from './data/todoData'
+import { todo1, todo2, todosObj } from './data/todoData'
 
 function App() {
   // return (
@@ -18,7 +18,10 @@ function App() {
   //     <Footer />
   //   </>
   // )
-  return <TodoListItem {...todo1} />
+
+
+  return <TodoList todos={todosObj} />  
+  // return <TodoListItem {...todo1} />
 }
 
 export default App
