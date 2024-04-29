@@ -1,20 +1,13 @@
  import './App.scss'
  import Header from "./components/Header";
+import TodoForm from './components/TodoForm';
 
 function App() {
   return (
     <>
     <Header />
     <main>
-      <section className="TodoForm">
-        <button>Add a task</button>
-        <form>
-          <input type="text" name="task" placeholder="Enter the task"/>
-          <input type="color" name="color" placeholder="Enter the color"/>
-          <input type="date" name="dueDate" placeholder="Enter the due date"/>
-          <button>Add to-do</button>
-        </form>
-      </section>
+      <TodoForm />
       <section className="TodoList">
         <h1>All todos</h1>
         <ul>
