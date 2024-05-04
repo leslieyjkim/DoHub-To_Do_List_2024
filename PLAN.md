@@ -79,6 +79,8 @@ const addTodoObj = (todos, todoInfo) => {
   const newTodo = { id, task, dueDate, color, isComplete: false };
 
   const updatedTodos = { ...todos, [id]: newTodo };
+
+  return updatedTodos;
 };
 ```
 
@@ -125,7 +127,7 @@ const deleteTodo = (todos, todoId) => {
 
 ```jsx
 const toggleTodoCompletion = (todos, todoId) => {
-  const udpatedTodo = { ...todos[todoId] };
+  const updatedTodo = { ...todos[todoId] };
 
   updatedTodo.isComplete = !updatedTodo.isComplete; //These are flipping the value arround. button activate vs de-activate whenever clicking. 
 
