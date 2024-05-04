@@ -34,7 +34,16 @@ export default function TodoForm(props) {
  
     return (
         <section className="TodoForm">
-            {!isActive && <button onClick={toggleForm}>Add a to-do</button>}
+            {!isActive && <button 
+                            onClick={toggleForm}
+                            style={{
+                                backgroundColor: '#f7f7dc',
+                                color: '#196185',
+                                padding: '10px 20px',
+                                norderRadius: '5px',
+                                cursor: 'pointer',
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                            }}>Add a to-do</button>}
             {isActive && (
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="task" placeholder="Enter the task" value={formData.task} onChange={handleChange}/>

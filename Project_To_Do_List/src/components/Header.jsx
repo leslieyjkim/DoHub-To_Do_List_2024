@@ -1,7 +1,7 @@
 export default function Header(props) {
     return (
         <header className="Header">
-            <h1>Super Todo List of Destiny</h1>
+            <h1>DoHub : helping you get things done</h1>
         </header>
     );
 }
