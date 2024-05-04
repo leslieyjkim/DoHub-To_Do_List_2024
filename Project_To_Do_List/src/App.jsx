@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useWow from "./hooks/useWow"
 import './App.scss'
 import Footer from './components/Footer';
 import Header from "./components/Header";
@@ -17,6 +18,7 @@ import {addTodoHelper, editTodoHelper, deleteTodoHelper, toggleTodoCompletion } 
 function App() {
   const [todos, setTodos] = useState(todosObj); //I'm gonna use the todosObj as a source, and I want to give my list to line 23. {todos}
 
+  const {sayWow} = useWow();
   //To use the Helpers, it's gonna be straightforward below;
   const toggleTodo = (todoId) => {                            //I need to know about the 'todoId'
     const updatedTodos = toggleTodoCompletion(todos, todoId)   //'todos' is state.
@@ -28,6 +30,7 @@ function App() {
     const updatedTodos = addTodoHelper(todos, todoInfo)
 
     setTodos(updatedTodos);
+    sayWow();
   }
 
   const deleteTodo = (todoId) => {
