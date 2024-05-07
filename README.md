@@ -1,3 +1,8 @@
+![Screenshot](https://raw.githubusercontent.com/leslieyjkim/DoHub-To_Do_List_2024/8ffef6dadc8881b973613608af216f7092535a73/TODO_1.png)
+![Screenshot](https://raw.githubusercontent.com/leslieyjkim/DoHub-To_Do_List_2024/8ffef6dadc8881b973613608af216f7092535a73/TODO_2.png)
+![Screenshot](https://raw.githubusercontent.com/leslieyjkim/DoHub-To_Do_List_2024/8ffef6dadc8881b973613608af216f7092535a73/TODO_3.png)
+![Screenshot](https://raw.githubusercontent.com/leslieyjkim/DoHub-To_Do_List_2024/8ffef6dadc8881b973613608af216f7092535a73/TODO_4.png)
+
 ##React Developer Workflow
 Oct-16-2023 cohorts W7D4
 
