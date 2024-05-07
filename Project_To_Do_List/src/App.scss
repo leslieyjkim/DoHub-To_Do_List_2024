@@ -1,17 +1,30 @@
-
+.Header{
+    background-color:#2e3b4f;
+    // color: 
+    text-align: center;
+    padding: 2em;
+}
 .TodoListItem{
-    max-width: 900px;
+    max-width: 850px;
     padding: 1em;
-    margin: 1em;
+    margin: 1em auto;
     display: flex;
+    justify-content: center;
     gap: 1em;
+    font-size: 1.2em;
 
     list-style-type: none; //removing bullet point in the list
     
-    border: 2px solid white;
+    border: 4px solid white;
     
     button:first-of-type {   //first button, 'Mark as incomplete'속성임. 오른쪽 버튼팀과 왼쪽텍스트 팀과 그룹으로 나눠, 중간에 공간 띄우기 
         margin-left: auto;
+        font-size: 1.2em;
+        background-color: rgb(118, 238, 174);
+        color:#2e3b4f;
+    }
+    button:last-of-type {
+        font-size: 1.2em;
     }
 }
 
@@ -23,17 +36,27 @@
 
 
 .TodoForm{
+    background-color: bisque;  
     display: flex;
     justify-content: center;
     max-width: 900px;
-    padding: 1em;
-    margin: 1em;
+    padding: 2em;
+    margin: 1.5em auto;
     form{
         display: flex;
         justify-content: center;
         gap: 1em;
         input{
-            font-size: 1.2em;
+            font-size: 1.7em;
         }
     }
+}
+
+
+.Footer{
+    background-color: rgb(17, 43, 61);
+    color:#7095ce;
+    padding: 0.5em;
+
+    p{text-align: right;}
 }
